@@ -1,0 +1,53 @@
+<%- include('./cabecalho'); %>
+    <div class="top">
+        <form method="post">
+            <input type="text" name="search" placeholder="Search bar">
+            <input type="submit" value="Search">
+        </form>
+    </div>
+    <table>
+        <tr>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Episodes</th>
+            <th>Release Date</th>
+            <th>End Date</th>
+            <th>Studio</th>
+            <th>Genres</th>
+            <th>Actions</th>
+        </tr>
+    <% Animes.forEach(function(anime){ %>
+        <tr>
+            <td>
+                <img class="img-anime" src="/images/<%=anime.image%>" alt="Image">
+            </td>
+            <td>
+                <%=anime.name%>
+            </td>
+            <td>
+                <%=anime.episodes%>
+            </td>
+            <td>
+                <%=anime.release.toDateString()%>
+            </td>
+            <td>
+                <%=anime.end.toDateString()%>
+            </td>
+            <td>
+                <%=anime.studio%>
+            </td>
+            <td>
+                <%=anime.genres%>
+            </td>
+            <td>
+                <a href="/anime/edt/<%=anime._id%>">
+                    <img class="img-responsive" src="/edit.png" alt="Edit">
+                </a>
+                <a href="/anime/del/<%=anime._id%>">
+                    <img class="img-responsive" src="/delete.png" alt="Delete">
+                </a>
+            </td>
+        </tr>
+    <% }) %>
+    </table>
+<%- include('../rodape')%>

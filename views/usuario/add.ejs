@@ -1,0 +1,9 @@
+<%- include('./cabecalho'); %>
+    <form method="post" enctype="multipart/form-data">
+        Nome: <input type="text" name="nome" placeholder="Digite seu Nome" required><br>
+        Email: <input type="email" name="email" placeholder="Digite seu Email" required><br>
+        Senha: <input type="password" name="senha" placeholder="Digite sua senha" required><br>
+        Foto: <input type="file" name="foto" accept="image/*" required><br>
+        <input type="submit" value="Salvar">
+    </form>
+<%- include('../rodape'); %>

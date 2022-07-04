@@ -1,0 +1,12 @@
+<%- include('./cabecalho'); %>
+    <form method="post" enctype="multipart/form-data">
+        Name: <input type="text" name="name" required><br>
+        Episodes: <input type="number" name="episodes"><br>
+        Release Date: <input type="date" name="release" required><br>
+        End Date: <input type="date" name="end" required><br>
+        Studio: <input type="text" name="studio" required><br>
+        Genres: <input type="text" name="genres" required><br>
+        Image: <input type="file" name="image" accept="image/*"><br>
+        <input type="submit" value="Save">
+    </form>
+<%- include('../rodape'); %>

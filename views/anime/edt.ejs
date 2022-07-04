@@ -1,0 +1,12 @@
+<%- include('./cabecalho'); %>
+    <form method="post" enctype="multipart/form-data">
+        Name: <input type="text" name="name" required value="<%=Anime.name%>"><br>
+        Episodes: <input type="number" name="episodes" value="<%=Anime.episodes%>"><br>
+        Release Date: <input type="date" name="release" required value="<%=Anime.release%>"><br>
+        End Date: <input type="date" name="end" required value="<%=Anime.end%>"><br>
+        Studio: <input type="text" name="studio" required value="<%=Anime.studio%>"><br>
+        Genres: <input type="text" name="genres" required value="<%=Anime.genres%>"><br>
+        Image: <input type="file" name="image" accept="image/*"><br>
+        <input type="submit" value="Save">
+    </form>
+<%- include('../rodape'); %>
