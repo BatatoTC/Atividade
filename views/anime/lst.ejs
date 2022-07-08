@@ -1,7 +1,7 @@
 <%- include('./cabecalho'); %>
     <div class="top">
         <form method="post">
-            <input type="text" name="search" placeholder="Search bar">
+            <input type="text" name="search" placeholder="Search Anime">
             <input type="submit" value="Search">
         </form>
     </div>
@@ -28,10 +28,14 @@
                 <%=anime.episodes%>
             </td>
             <td>
-                <%=anime.release.toDateString()%>
+                <%=anime.release.getDate() + 1%>/
+                <%=anime.release.getMonth()%>/
+                <%=anime.release.getFullYear()%>
             </td>
             <td>
-                <%=anime.end.toDateString()%>
+                <%=anime.end.getDate() + 1%>/
+                <%=anime.end.getMonth()%>/
+                <%=anime.end.getFullYear()%>
             </td>
             <td>
                 <%=anime.studio%>
